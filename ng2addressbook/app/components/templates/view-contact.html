@@ -1,0 +1,61 @@
+<div class="container">
+    <h2 class="well hidden-xs" style="color: yellow">
+        {{ contact.gender | title }} {{contact.name}}
+    </h2>
+    <p class="well hidden-sm hidden-md hidden-lg" style="color: lightblue">
+        {{ contact.gender | title }} {{contact.name}}
+        {{ contact.dob | age: 1 }}
+    </p>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-xs-4 control-label">Email</label>
+            <div class="col-xs-8">
+                {{ contact.email }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label">Phone</label>
+            <div class="col-xs-8">
+                {{ contact.phone }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label">Date of birth</label>
+            <div class="col-xs-8">
+                {{ contact.dob | date: "EEEE MMMM d, yyyy"}}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label">City</label>
+            <div class="col-xs-8">
+                {{ contact.city }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label">State</label>
+            <div class="col-xs-8">
+                {{ contact.state }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-4 control-label">Country</label>
+            <div class="col-xs-8">
+                {{ contact.country }}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12 text-center">
+
+                <button type="button" class="btn btn-primary" 
+                    [routerLink] = "['/edit-contact', contact._id]">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </button>
+
+                <button type="button" class="btn btn-danger" (click)="deleteButtonHandler()">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </button>
+
+            </div>
+        </div>
+    </form>
+</div>

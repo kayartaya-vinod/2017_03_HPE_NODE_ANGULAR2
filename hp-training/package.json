@@ -1,0 +1,21 @@
+{
+  "name": "hp-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex01.js",
+  "scripts": {
+    "test": "mocha",
+    "promise-test": "mocha test/contact-service-promise.spec.js"
+  },
+  "keywords": [],
+  "author": "Vinod <vinod@vinod.co>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "express": "^4.15.2",
+    "mocha": "^3.2.0",
+    "mongodb": "^2.2.25"
+  }
+}

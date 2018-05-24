@@ -1,0 +1,16 @@
+<div>
+    <input type="search" class="form-control"
+        placeholder="Search..." [(ngModel)]="token">
+    <ul class="list-group">
+        <li *ngFor="let c of contacts | filter: token: 'name' " 
+            [routerLink] = "['/view-contact', c._id]"
+            style="cursor: pointer; "
+            class="list-group-item">
+            {{ c.gender | title }} {{ c.name }}
+
+            <span class="pull-right">
+                {{ c.city }}
+            </span>
+        </li>
+    </ul>
+</div>
